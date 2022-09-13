@@ -1,0 +1,25 @@
+echo:
+  group: {}
+  mode: '755'
+  status: true
+  user: {}
+nonebot_plugin_epicfree:
+  group: {}
+  mode: '755'
+  status: true
+  user: {}
+nonebot_plugin_heisi:
+  group: {}
+  mode: '755'
+  status: true
+  user: {}
+nonebot_plugin_manager:
+  group: {}
+  mode: '311'
+  status: false
+  user: {}
+random_cat_gif:
+  group: {}
+  mode: '755'
+  status: true
+  user: {}

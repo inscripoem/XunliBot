@@ -1,12 +1,9 @@
 # XunliBot
 
-## How to start
+## 简介
 
-1. generate project using `nb create` .
-2. create your plugin using `nb plugin create` .
-3. writing your plugins under `src/plugins` folder.
-4. run your bot using `nb run` .
+东方循礼bot是基于mirai与nnonebot为框架的机器人系统，其功能大部来自社区
 
-## Documentation
+## 使用
 
-See [Docs](https://v2.nonebot.dev/)
+暂时还在完善中

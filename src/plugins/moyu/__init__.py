@@ -1,14 +1,14 @@
 from nonebot import on_command, logger, get_driver
 from nonebot.params import CommandArg
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message
+from nonebot.adapters.onebot.v11 import MessageEvent, Message
 from .data_source import get_moyu
 
 moyu = on_command("摸鱼", block=True)
 
 
 @moyu.handle()
-async def hf(bot: Bot, event: GroupMessageEvent, msg: Message = CommandArg()):
+async def hf(bot: Bot, event: MessageEvent, msg: Message = CommandArg()):
     pic = await get_moyu()
     if pic[0]:
         try:

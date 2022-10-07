@@ -6,7 +6,7 @@ from httpx import AsyncClient
 from nonebot import logger
 
 
-async def get_cat():
+async def get_moyu():
     async with AsyncClient() as client:
         req_url = "https://api.j4u.ink/v1/store/other/proxy/remote/moyu.json"
         try:

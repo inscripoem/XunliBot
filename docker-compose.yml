@@ -17,7 +17,7 @@ services:
     image: inscripoem/xunlibot:latest
     container_name: nonebot
     volumes:
-      - ./env:/app/env
+      - ./env:/app/env # 用于保存 nonebot 配置文件，请复制 .env.prod 等文件到此
     environment:
       - ENVIRONMENT=prod # 配置 nonebot 运行环境，此项会被 .env 文件覆盖
       - APP_MODULE=bot:app # 配置 asgi 入口

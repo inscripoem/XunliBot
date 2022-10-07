@@ -19,7 +19,8 @@ WORKDIR /app
 COPY --from=requirements-stage /tmp/requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt \
-    && rm requirements.txt \
-    && python bot.py
+    && rm requirements.txt
 
 COPY ./ /app/
+
+RUN python bot.py

@@ -32,7 +32,7 @@ jobs:
           script: |
             cd $DEPLOY_PATH
             docker-compose down
-            docker image rm xunlibot
+            docker image rm inscripoem/xunlibot
             docker-compose pull
             docker-compose up -d
 

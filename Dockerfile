@@ -11,4 +11,4 @@ RUN poetry install --no-root --no-dev
 
 COPY . .
 
-CMD [ "nb", "run" ]
+CMD [ "cp", "/app/env/.env.prod", "/app", "&&", "nb", "run" ]

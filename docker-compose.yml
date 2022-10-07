@@ -16,8 +16,8 @@ services:
   nonebot:
     image: inscripoem/xunlibot:latest
     container_name: nonebot
-    env_file:
-      - ".env.prod" # fastapi 使用的环境变量文件
+    volumes:
+      - ./env:/app/env
     environment:
       - ENVIRONMENT=prod # 配置 nonebot 运行环境，此项会被 .env 文件覆盖
       - APP_MODULE=bot:app # 配置 asgi 入口

@@ -15,6 +15,7 @@ nonebot-plugin-apscheduler = "0.1.4"
 nonebot-plugin-epicfree = "^0.1.9"
 nonebot-plugin-heisi = "^0.3.1"
 nonebot-plugin-status = "^0.4.0"
+nb-cli = "^0.6.7"
 
 [tool.poetry.dev-dependencies]
 nb-cli = "^0.6.0"

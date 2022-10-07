@@ -11,4 +11,4 @@ RUN poetry install --no-root --no-dev
 
 COPY . .
 
-CMD [ "python", "./bot.py" ]
+CMD [ "nb", "run" ]

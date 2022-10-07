@@ -1,11 +1,24 @@
 version: "3"
 services:
   # 其他配置参考 https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/
+  # 与go-cqhttp同时部署
+  gocqhttp:
+    image: pcrbot/gocqhttp:ffmpeg
+    volumes:
+      - ./gocqhttp:/data:delegated # 用于保存 gocqhttp 相关文件，请复制 config.yml 等文件到此
+    tty: true
+    stdin_open: true
+    expose:
+      - "8080"
+    environment:
+      - TZ=Asia/Shanghai
+    depends_on:
+      - nonebot
   nonebot:
-    build: .
+    image: inscripoem/xunlibot:latest
     container_name: nonebot
-    ports:
-      - "8080:8080" # 映射端口到宿主机 宿主机端口:容器端口
+    expose:
+      - "8080"
     env_file:
       - ".env.prod" # fastapi 使用的环境变量文件
     environment:
@@ -13,3 +26,6 @@ services:
       - APP_MODULE=bot:app # 配置 asgi 入口
       - MAX_WORKERS=1 # 如果你有多个QQ，且存在 self_id 指定，多个 worker 会导致无法找到其他 websocket 连接
     network_mode: bridge
+networks:
+  default:
+    name: workspace-default

@@ -15,12 +15,16 @@ nonebot-plugin-apscheduler = "0.1.4"
 nonebot-plugin-epicfree = "^0.1.9"
 nonebot-plugin-status = "^0.4.0"
 nb-cli = "^0.6.7"
+nonebot-plugin-picsearcher = "^0.1.8"
 
 [tool.poetry.dev-dependencies]
 nb-cli = "^0.6.0"
 
 [tool.nonebot]
-plugins = ["nonebot_plugin_epicfree", "nonebot_plugin_manager", "nonebot_plugin_status"]
+plugins = ["nonebot_plugin_epicfree",
+            "nonebot_plugin_manager",
+            "nonebot_plugin_status",
+            "nonebot-plugin-picsearcher"]
 plugin_dirs = ["src/plugins"]
 
 [build-system]

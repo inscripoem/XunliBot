@@ -13,6 +13,11 @@ nonebot_plugin_epicfree:
   mode: '755'
   status: true
   user: {}
+nonebot_plugin_hikarisearch:
+  group: {}
+  mode: '755'
+  status: true
+  user: {}
 nonebot_plugin_manager:
   group: {}
   mode: '311'

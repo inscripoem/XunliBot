@@ -52,7 +52,8 @@ plugins = [
         "nonebot_plugin_memes",
         "nonebot_plugin_htmlrender",
         "nonebot_plugin_lolmatch",
-        "nonebot_plugin_cocdicer"
+        "nonebot_plugin_cocdicer",
+        "nonebot_plugin_miragetank"
         ]
 plugin_dirs = ["src/plugins"]
 

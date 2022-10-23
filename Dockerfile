@@ -3,7 +3,9 @@ FROM python:3.10
 WORKDIR /app
 
 RUN python3 -m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple \
-    && python3 -m pip install poetry && poetry config virtualenvs.create false
+    && python3 -m pip install poetry && poetry config virtualenvs.create false \
+    && sudo apt install fonts-noto && sudo locale-gen zh_CN zh_CN.UTF-8 \
+    && sudo update-locale LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 && fc-cache -fv
 
 COPY ./pyproject.toml ./poetry.lock* /app/
 

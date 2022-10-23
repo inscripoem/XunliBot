@@ -5,10 +5,48 @@ from nonebot.adapters.onebot.v11 import Bot, Event, MessageSegment
 from nonebot.log import logger
 from .get_problem_data import *
 from .get_user_data import *
+from nonebot.plugin import PluginMetadata
 from nonebot_plugin_htmlrender import get_new_page
 import os
 
-
+__plugin_meta__ = PluginMetadata(
+    name='leetcode',
+    description='leetcode查询插件',
+    usage='如下',
+    extra={
+        'menu_data': [
+            {
+                'func': '每日一题',
+                'trigger_method': 'on_cmd',
+                'trigger_condition': 'lc每日/lc/leetcode',
+                'brief_des': '发送今天的每日一题',
+                'detail_des': '发送今天的每日一题'
+            },
+            {
+                'func': '题目搜索',
+                'trigger_method': 'on_cmd',
+                'trigger_condition': 'lc查找/lc搜索/leetcode搜索+题目名',
+                'brief_des': '发送搜索到的第一道题',
+                'detail_des': '发送搜索到的第一道题'
+            },
+            {
+                'func': '随机一题',
+                'trigger_method': 'on_cmd',
+                'trigger_condition': 'lc随机/lc随机一题/leetcode随机',
+                'brief_des': '请求leetcode随机一题，发送请求到的任意题目',
+                'detail_des': '请求leetcode随机一题，发送请求到的任意题目'
+            },
+            {
+                'func': '查询用户信息',
+                'trigger_method': 'on_cmd',
+                'trigger_condition': 'lc查询/lc查询用户/leetcode查询+用户ID',
+                'brief_des': '查询用户基本信息',
+                'detail_des': '查询用户基本信息'
+            }                        
+        ],
+        'menu_template': 'default'
+    }
+)
 
 request_today = on_command("lc每日",aliases={"lc","leetcode"},priority = 10,block = True)
 

@@ -147,7 +147,6 @@ dmypy.json
 
 # nonebot data
 /data/
-src/plugins/nonebot_plugin_auto_teenstudy/data/dxx*_list.json
 
 
 # End of https://www.toptal.com/developers/gitignore/api/python

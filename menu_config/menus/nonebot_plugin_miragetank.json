@@ -1,0 +1,5 @@
+{
+    "name": "幻影坦克",
+    "description": "生成幻影坦克图（在黑白背景下显示不同的图）",
+    "usage": "发送「<ft color=blue>生成幻影坦克/miragetank</ft>」\n需要具体参数：合成模式：<ft color=blue>grey</ft>或<ft color=blue>color</ft>\n与至少两张图片"
+}

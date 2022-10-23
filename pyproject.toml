@@ -33,6 +33,7 @@ nonebot-plugin-memes = "^0.3.5"
 nonebot-plugin-htmlrender = "^0.2.0.1"
 nonebot-plugin-lolmatch = { version = "^0.2.5", python = "<3.11" }
 nonebot-plugin-cocdicer = "^0.4.0"
+nonebot-plugin-miragetank = "^0.0.4"
 
 [tool.poetry.dev-dependencies]
 nb-cli = "^0.6.0"

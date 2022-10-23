@@ -847,6 +847,21 @@ nonebot2 = ">=2.0.0-beta.4,<3.0.0"
 Pillow = ">=9.0.0,<10.0.0"
 
 [[package]]
+name = "nonebot-plugin-miragetank"
+version = "0.0.4"
+description = "Generate miragetank photo"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+aiohttp = "*"
+nonebot-adapter-onebot = ">=2.0.0b1"
+nonebot2 = ">=2.0.0b1"
+numpy = "*"
+pillow = ">=8.4.0"
+
+[[package]]
 name = "nonebot-plugin-petpet"
 version = "0.3.15"
 description = "Nonebot2 plugin for making fun pictures"
@@ -1484,7 +1499,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f16b9640d48cfdc46df2738df6a5af63119fbf45f052b15ea56006b0b477f3b3"
+content-hash = "734850605b6db52584475361fe974bae379211332fae22db8a894053bed03b18"
 
 [metadata.files]
 aiofiles = [
@@ -2461,6 +2476,10 @@ nonebot-plugin-manager = [
 nonebot-plugin-memes = [
     {file = "nonebot_plugin_memes-0.3.5-py3-none-any.whl", hash = "sha256:51221fb69bc43a6eabbc1a4e1fce153fe9c19bb3aaa578c0f139de2677ff94e0"},
     {file = "nonebot_plugin_memes-0.3.5.tar.gz", hash = "sha256:0de500c4b1706db5c08e6e7f2eee941e5bc04a1300153bd6d7d8710969ba8e27"},
+]
+nonebot-plugin-miragetank = [
+    {file = "nonebot_plugin_miragetank-0.0.4-py3-none-any.whl", hash = "sha256:da3e484f5de437fcb19996a0057bddcc9cd13a373b1b753364a496e11ce52f51"},
+    {file = "nonebot_plugin_miragetank-0.0.4.tar.gz", hash = "sha256:63b2433e91eab84ef5799a68f91127b79b91c77756e8c42cd731bc2515b5dce8"},
 ]
 nonebot-plugin-petpet = [
     {file = "nonebot_plugin_petpet-0.3.15-py3-none-any.whl", hash = "sha256:9868f81e89682e043dc88511d6cf6a6cc107fa5a466ec9a91d7d8b0fa6f3b954"},

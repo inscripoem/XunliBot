@@ -1,0 +1,5 @@
+{
+    "name": "epicfree",
+    "description": "获取epic免费游戏资讯",
+    "usage": "发送「<ft color=blue>喜加一</ft>」查找限免游戏\n发送「<ft color=blue>喜加一订阅</ft>」订阅游戏资讯\n发送「<ft color=blue>喜加一订阅删除</ft>」取消订阅游戏资讯\n<ft size=20>注：插件响应基于正则匹配，所以，形如「EpIc喜+1」的指令也可以被识别</ft>"
+}

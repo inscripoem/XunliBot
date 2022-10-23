@@ -1,13 +1,16 @@
-from nonebot import on_command, logger, get_driver
-from nonebot.params import CommandArg
+from nonebot import on_command, logger
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.adapters.onebot.v11 import MessageSegment, Message, MessageEvent
-import base64
-from re import findall
-from sys import exc_info
+from nonebot.adapters.onebot.v11 import MessageSegment, MessageEvent
 import httpx
-from httpx import AsyncClient
 from nonebot import logger
+from nonebot.plugin import PluginMetadata
+
+# 基于PicMenu的帮助系统
+__plugin_meta__ = PluginMetadata(
+    name='一起摸鱼！',
+    description='从“摸鱼人日历”公众号获取当天的摸鱼日历图',
+    usage='摸鱼'
+)
 
 moyu = on_command("摸鱼", block=True)
 

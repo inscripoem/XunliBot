@@ -1,8 +1,9 @@
 from nonebot import on_command, logger, get_driver
 from nonebot.params import CommandArg
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageSegment
 from nonebot.plugin import PluginMetadata
+from .data_source import get_cat, get_dog, get_fox, get_else
 
 # 基于PicMenu的帮助系统
 __plugin_meta__ = PluginMetadata(
@@ -70,6 +71,7 @@ async def hf(bot: Bot, event: GroupMessageEvent, msg: Message = CommandArg()):
                 message=Message(f"您点的{cat}一份~"),
             )
             await miao.send(message=Message(pic[2]))
+            #await miao.send(message=MessageSegment.image(pic[3],cache=1))
         except Exception as e:
             logger.warning(e)
             await miao.finish(

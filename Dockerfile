@@ -6,8 +6,7 @@ RUN echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib
     echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free' >> /etc/apt/sources.list && \
     echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free' >> /etc/apt/sources.list && \
     echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free' >> /etc/apt/sources.list && \
-    apt update && \
-    apt install -y iptables iproute2 procps chromium chromium-driver
+    apt update
 
 RUN python3 -m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple \
     && python3 -m pip install poetry && poetry config virtualenvs.create false

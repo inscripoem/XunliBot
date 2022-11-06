@@ -16,6 +16,7 @@ class Config(BaseModel, extra=Extra.ignore):
     ai_draw_rank: int = Field(default=10, ge=0)
     ai_draw_data: Path = Path("data/aidraw")
     ai_draw_text: str = "\n图像种子: {seed}\n提示标签: {tags}"
+    ai_draw_database: bool = True
 
     @validator("ai_draw_data")
     def check_path(cls, v: Path):
@@ -38,4 +39,5 @@ data_path = plugin_config.ai_draw_data / "data"
 data_path.mkdir(parents=True, exist_ok=True)
 save_path = plugin_config.ai_draw_data / "save"
 save_path.mkdir(parents=True, exist_ok=True)
-text_templet = plugin_config.ai_draw_text
+text_templet = plugin_config.ai_draw_text.replace("\\\\", "\\")
+enable_database = plugin_config.ai_draw_database

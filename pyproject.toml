@@ -39,6 +39,7 @@ tortoise-orm = "^0.19.2"
 aiosqlite = "^0.17.0"
 httpx = "^0.22.0"
 nonebot-plugin-txt2img = "^0.1.2"
+python-Levenshtein = "^0.20.8"
 
 [tool.poetry.dev-dependencies]
 nb-cli = "^0.6.0"

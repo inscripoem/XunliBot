@@ -19,9 +19,17 @@ services:
     volumes:
       - ./env:/app/env # 用于保存 nonebot 配置文件，请复制 .env.prod 等文件到此
       - ./data:/app/data # 用于保存 nonebot 数据文件
+      - ./dxx_data/dxx_list.json:/app/src/plugins/nonebot_plugin_auto_teenstudy/data/dxx_list.json
+      - ./dxx_data/dxx_push_list.json:/app/src/plugins/nonebot_plugin_auto_teenstudy/data/dxx_push_list.json # 大学习用户数据
+    expose:
+      - "8080"
     environment:
       - ENVIRONMENT=prod # 配置 nonebot 运行环境，此项会被 .env 文件覆盖
       - APP_MODULE=bot:app # 配置 asgi 入口
       - MAX_WORKERS=1 # 如果你有多个QQ，且存在 self_id 指定，多个 worker 会导致无法找到其他 websocket 连接
       - TZ=Asia/Shanghai
-    network_mode: host
+
+
+networks:
+  default:
+    name: workspace-default

@@ -3,21 +3,20 @@ services:
   # 其他配置参考 https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/
   # 与go-cqhttp同时部署
   gocqhttp:
-    image: pcrbot/gocqhttp:ffmpeg
+    image: silicer/go-cqhttp:latest
     volumes:
       - ./gocqhttp:/data:delegated # 用于保存 gocqhttp 相关文件，请复制 config.yml 等文件到此
     tty: true
     stdin_open: true
     environment:
       - TZ=Asia/Shanghai
-    network_mode: host
     depends_on:
       - nonebot
   nonebot:
     image: inscripoem/xunlibot:latest
     container_name: nonebot
     volumes:
-      - ./env:/app/env # 用于保存 nonebot 配置文件，请复制 .env.prod 等文件到此
+      - ./env/env.prod:/app/env.prod # 用于保存 nonebot 配置文件，请复制 .env.prod 等文件到此
       - ./data:/app/data # 用于保存 nonebot 数据文件
       - ./dxx_data/dxx_list.json:/app/src/plugins/nonebot_plugin_auto_teenstudy/data/dxx_list.json
       - ./dxx_data/dxx_push_list.json:/app/src/plugins/nonebot_plugin_auto_teenstudy/data/dxx_push_list.json # 大学习用户数据
@@ -32,4 +31,4 @@ services:
 
 networks:
   default:
-    name: workspace-default
+    name: nonebot-default
